@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+    pre_build:
+      commands:
+        - echo pre-build nodejs backend
+    build:
+      commands:
+        - echo build nodejs backend
+        - echo Building the production docker image
+    post_build:
+      commands:
+        - echo post building docker image
+artifacts:
+  files:
+    - '**/*'
